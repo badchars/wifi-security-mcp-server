@@ -1,0 +1,10 @@
+node_modules/
+dist/
+bun.lock
+bun.lockb
+.env
+.env.*
+*.tgz
+test-*.ts
+.DS_Store
+docs/translations/
