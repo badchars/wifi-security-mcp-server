@@ -1,0 +1,55 @@
+name: New Protocol / Knowledge Base
+description: Suggest a new wireless protocol or knowledge base to support
+title: "[Protocol] "
+labels: ["enhancement", "new-protocol"]
+
+body:
+  - type: input
+    id: protocol-name
+    attributes:
+      label: Name of the wireless protocol or knowledge base
+      description: Name of the wireless protocol or knowledge base.
+      placeholder: "e.g., Thread, Matter, WiFi 7 MLO, LoRaWAN v1.1"
+    validations:
+      required: true
+
+  - type: input
+    id: reference-docs
+    attributes:
+      label: Reference documentation URL
+      description: Link to protocol specification or security research.
+      placeholder: "https://docs.example.com/specification"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data-format
+    attributes:
+      label: Data Format
+      description: What type of reference material is available?
+      options:
+        - Free dataset
+        - Research paper
+        - Specification document
+        - Open source tool
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-tools
+    attributes:
+      label: Suggested tools
+      description: What tools could analyze this protocol?
+      placeholder: |
+        - protocol_scan: Scan for ... devices
+        - protocol_analyze: Analyze ... security
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-valuable
+    attributes:
+      label: Why this protocol?
+      description: What makes this protocol valuable for wireless security analysis?
+    validations:
+      required: true
